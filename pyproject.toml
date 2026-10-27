@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spear1octa-leastpriv"
+version = "0.1.0"
+description = "比对调用轨迹里的资源访问与授权清单，标出从未用到的授权"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "spear1octa" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://spear1octa.github.io"
+Repository = "https://github.com/spear1octa/leastpriv"
+Issues = "https://github.com/spear1octa/leastpriv/issues"
+
+[project.scripts]
+leastpriv = "leastpriv:main"
+
+[tool.setuptools]
+py-modules = ["leastpriv"]
